@@ -10,7 +10,7 @@
 	<div class="first-block">
 		<header>
 			<div class="header-nav">
-				<a href="">Обо мне</a>
+				<a href="">Об мне</a>
 				<a href="">Портфолио</a>
 				<div class="logo">
 					<h3>Dinara style</h3>
