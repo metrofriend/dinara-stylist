@@ -70,17 +70,33 @@
 		</div>
 		<div class="quote">
 			<div class="quote-desc">
-				<h4>// Клиент сказал</h4>
-				<h2>
-					" Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, pariatur. Voluptatibus ex
-					quod maiores quibusdam quae odio dolor voluptates enim. "
-				</h2>
-				<p>- Иван Иванов. Владелец магазина</p>
+				<h2 class="fw-300">// Клиент сказал</h2>
+				<h3 class="fw-300">
+					Я очень довольна работой стилиста Динары Галимовой! Раньше я не обращала особого внимания
+					на свой стиль и как-то старалась не выделяться среди толпы. Однако после того, как я
+					побывала у Динары, я полностью изменила свое отношение к своей внешности и теперь получаю
+					массу комплиментов от окружающих!
+				</h3>
+				<p class="fw-300">- Камила Хайбулова</p>
 			</div>
 			<div class="quote-image">
 				<!-- ДОДЕЛАТЬ -->
 				<img src="" alt="" />
 				<!-- ДОДЕЛАТЬ -->
+			</div>
+		</div>
+		<div class="portfolio">
+			<h2>Образы</h2>
+			<div class="portfolio-content">
+				<div class="video">
+					<video src="../src/images/video1.mp4" autoplay playsinline muted loop />
+				</div>
+				<div class="video">
+					<video src="../src/images/video2.mp4" autoplay playsinline muted loop />
+				</div>
+				<div class="video">
+					<video src="../src/images/video3.mp4" autoplay playsinline muted loop />
+				</div>
 			</div>
 		</div>
 		<div class="separator" />
@@ -150,14 +166,13 @@
 		color: #fff;
 		text-decoration: none;
 	}
+
+	a:hover {
+		color: #cc9966;
+		transition: 0.3s;
+	}
 	/* TOOLS */
 
-	a {
-		text-decoration: none;
-	}
-	h3 {
-		margin: 0 !important; /* Отрицательный отступ между заголовком и текстом */
-	}
 	.container {
 		font-family: 'Cormorant SC', serif;
 	}
@@ -177,19 +192,19 @@
 		justify-content: space-between;
 		flex-grow: 1;
 	}
-	/* .header-nav a {
+	.header-nav a {
 		color: #fff;
-	} */
+	}
 	.first-block {
-		background: url('../images/slide.jpg') no-repeat;
-		background-size: 100%;
-		height: 100vh;
+		background: url(/src/images/slide.jpg) no-repeat;
+		background-size: cover;
+		height: 850px;
 	}
 
 	.content {
 		display: flex;
 		align-items: center;
-		height: calc(100%-80px);
+		height: 80%;
 	}
 
 	.content-content {
@@ -202,20 +217,19 @@
 	}
 	.content-description {
 		width: 65%;
+		margin-top: 15px;
 	}
 
 	.title p {
-		font-size: 24px;
+		font-size: 22px;
 		margin: 0;
 		width: 20%;
-		font-weight: 800;
 	}
 	.title {
 	}
 	.title h1 {
 		font-size: 72px;
-		margin: 0 !important;
-		padding: 0 !important;
+		line-height: 62px;
 	}
 
 	.button {
@@ -239,7 +253,7 @@
 	}
 	.hover:hover {
 		--_i: 100%;
-		transition: 0.3s, -webkit-mask-size 0.3s 0.3s;
+		transition: 0.2s, -webkit-mask-size 0.2s 0.2s;
 	}
 
 	/* MAIN */
@@ -248,12 +262,33 @@
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		padding: 50px 0px;
+		padding: 50px 30px;
 	}
 
 	.text-block .number {
 		font-size: 64px;
 		font-weight: 600;
+	}
+
+	.portfolio {
+		padding: 50px 100px;
+	}
+	.portfolio h2 {
+		font-size: 36px;
+
+		text-align: center;
+	}
+
+	.portfolio-content {
+		margin-top: 30px;
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.portfolio-content .video video {
+		width: 300px;
+		height: auto;
+		border-radius: 10px;
 	}
 
 	/* QUOTE */
@@ -265,7 +300,23 @@
 	}
 
 	.quote-desc {
-		width: 65%;
+		width: 60%;
+		font-family: 'Roboto', sans-serif;
+		letter-spacing: 2px;
+	}
+
+	.fw-300 {
+		font-weight: 300;
+	}
+	.quote-desc h2 {
+	}
+
+	.quote-desc h3 {
+		margin-top: 15px;
+	}
+
+	.quote-desc p {
+		margin-top: 15px;
 	}
 
 	.separator {
